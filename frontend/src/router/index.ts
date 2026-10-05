@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Dashboard from '@/views/Dashboard.vue'
+const ShiftHandover = () => import('@/views/ShiftHandover.vue')
 const Pumpstation = () => import('@/views/pumpstation/index.vue')
 const Pumprun = () => import('@/views/pumprun/index.vue')
 const Drainpipe = () => import('@/views/drainpipe/index.vue')
@@ -24,6 +25,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', name: 'dashboard', component: Dashboard },
+    { path: '/shift-handover', name: 'shift-handover', component: ShiftHandover },
     { path: '/pumpstation', name: 'pumpstation', component: Pumpstation },
     { path: '/pumprun', name: 'pumprun', component: Pumprun },
     { path: '/drainpipe', name: 'drainpipe', component: Drainpipe },
